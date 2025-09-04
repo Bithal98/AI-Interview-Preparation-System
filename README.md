@@ -1,10 +1,15 @@
 # AI-Interview-Preparation-System
 AI-powered interview preparation system using LangChain, LLaMA 3, RAG, and Whisper. Generates domain-specific questions, evaluates candidate answers via speech-to-text, and provides personalized feedback with an interactive interface.
+<img width="1919" height="927" alt="Screenshot 2025-09-04 153401" src="https://github.com/user-attachments/assets/56d27c47-178d-41f2-a4b1-d7ea5ea96ac5" />
 
-<img width="1919" height="919" alt="Screenshot 2025-09-04 041402" src="https://github.com/user-attachments/assets/42c7fcd5-d515-4d9c-b4c5-2348519b76d7" />
+
 
 AI Interview Preparation System
 An interactive AI-powered interview preparation web app built with Streamlit. It supports text and voice inputs, allows users to upload resumes for personalized domain-specific questions, evaluates answers with AI-generated feedback, and keeps session history with PDF export.
+
+
+It is aslo evaluted 
+<img width="1909" height="908" alt="Screenshot 2025-09-04 153345" src="https://github.com/user-attachments/assets/e402ee3e-a196-4dea-82fa-f8adc519e4d1" />
 
 Features
 Select interview domain: DSA, DBMS, OOP, ML, HR, Cloud
