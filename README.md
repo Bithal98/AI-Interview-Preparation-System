@@ -9,47 +9,41 @@ The system supports resume-based tailoring, session history tracking, and PDF ex
 AI Interview Preparation System
 An interactive AI-powered interview preparation web app built with Streamlit. It supports text and voice inputs, allows users to upload resumes for personalized domain-specific questions, evaluates answers with AI-generated feedback, and keeps session history with PDF export.
 
+## 🧠 Overview
+The **AI Interview Preparation System** is an interactive **AI-powered web app** built with **Streamlit, LangChain-style RAG, LLaMA 3, and Whisper**.  
+It generates **domain-specific interview questions**, evaluates answers (text/voice), and provides **personalized AI-driven feedback**.  
 
-It is aslo evaluted 
-<img width="1909" height="908" alt="Screenshot 2025-09-04 153345" src="https://github.com/user-attachments/assets/e402ee3e-a196-4dea-82fa-f8adc519e4d1" />
+📄 Upload your **resume**, 🎤 practice answers via **voice or text**, and 📊 export your full interview session as **PDF**.  
 
+---
 
-🚀 Features
+## ✨ Key Features
+- 🎓 **Domain Selection** → DSA, DBMS, OOP, ML, HR, Cloud  
+- 📑 **Resume Upload** (PDF/DOCX) → Tailored, domain-specific questions  
+- 🔄 **Non-repetitive Question Generation**  
+- 🎙️ **Answer via Text or Voice** (Whisper API for STT)  
+- 📈 **AI-powered Evaluation** → Scoring + detailed feedback  
+- 🕒 **Session History Tracking**  
+- 📤 **Export Conversations as PDF**  
+- 🎨 **Clean, intuitive Streamlit UI** with sidebar instructions  
 
-Select interview domains: DSA, DBMS, OOP, ML, HR, Cloud
+---
 
-Upload your resume (PDF/DOCX) for tailored questions
+## ⚙️ Installation & Setup
 
-Generate multiple non-repetitive questions per domain
+### 🔹 Prerequisites
+- Python **3.8+**
+- API Keys:
+  - [Groq API](https://groq.com) → AI question generation & evaluation  
+  - [Hugging Face API](https://huggingface.co) → Whisper speech-to-text  
 
-Answer via typing or voice recording (Whisper API-backed STT)
-
-Get AI-powered evaluation with scores & detailed feedback
-
-Track session history and export conversations as PDF
-
-Clean, intuitive Streamlit UI with sidebar instructions
-
-🛠️ Installation & Setup
-Prerequisites
-
-Python 3.8+
-
-API keys for:
-
-Groq API
- (AI question generation & evaluation)
-
-Hugging Face API
- (Whisper STT)
-
-Clone & Setup
+### 🔹 Clone Repository
+```bash
 git clone https://github.com/yourusername/ai-interview-prep.git
 cd ai-interview-prep
 
 
-Create and activate a virtual environment:
-
+🔹 Virtual Environment
 python -m venv venv
 
 
@@ -57,19 +51,18 @@ Windows: venv\Scripts\activate
 
 macOS/Linux: source venv/bin/activate
 
-Install requirements:
-
+🔹 Install Dependencies
 pip install -r requirements.txt
 
-Configure API Keys
+🔹 API Configuration
 
-Create a .env file in the root directory:
+Create a .env file in the project root:
 
 GROQ_API_KEY=your_groq_api_key_here
 HF_API_TOKEN=your_huggingface_api_token_here
 
 
-Update modules/whisper_stt.py with your Hugging Face token:
+Update modules/whisper_stt.py:
 
 headers = {"Authorization": "Bearer YOUR_HF_ACCESS_TOKEN"}
 
@@ -80,48 +73,53 @@ Run the app:
 streamlit run app.py
 
 
-Open the app in your browser: http://localhost:8501
+Open in browser → http://localhost:8501
 
-How to Use
+📝 Workflow
 
-Select interview domain from the sidebar.
+Select an interview domain from sidebar.
 
-(Optional) Upload your resume for personalized questions.
+(Optional) Upload resume for personalized questions.
 
 Click Generate Question.
 
-Answer by typing or upload a voice response (WAV/MP3).
+Answer by typing or uploading a voice recording (WAV/MP3).
 
-Click Evaluate Answer for AI feedback & score.
+Click Evaluate Answer → Get AI score & feedback.
 
-Export entire session as PDF for offline review.
+Export session as PDF.
 
-Review session history at the bottom.
+Review session history anytime.
 
-📂 Folder Structure
+📂 Project Structure
 ai-interview-prep/
 │── app.py
 │── requirements.txt
 │── .env
 │
 ├── modules/
-│   ├── question_generator.py
-│   ├── evaluator.py
-│   ├── feedback.py
-│   ├── whisper_stt.py
-│   └── ...
+│   ├── question_generator.py   # Generates domain-specific questions
+│   ├── evaluator.py            # Evaluates answers
+│   ├── feedback.py             # AI feedback system
+│   ├── whisper_stt.py          # Voice-to-text using Whisper
 │
 ├── utils/
-│   ├── pdf_export.py
-│   ├── resume_extract.py
-│   └── ...
+│   ├── pdf_export.py           # Export session as PDF
+│   ├── resume_extract.py       # Extracts resume details
 │
 ├── dashboard/
-│   └── history.py
+│   └── history.py              # Session tracking & dashboard
 │
 ├── data/
-│   └── question_bank.yaml
+│   └── question_bank.yaml      # Predefined question set
 │
 ├── static/
 │   ├── logo.png
-│   └── style.css
+│   └── style.css               # Custom UI styles
+
+
+It is aslo evaluted 
+<img width="1909" height="908" alt="Screenshot 2025-09-04 153345" src="https://github.com/user-attachments/assets/e402ee3e-a196-4dea-82fa-f8adc519e4d1" />
+
+
+
